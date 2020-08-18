@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='viz.css') }}">
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script src="{{ url_for('static', filename='viz_0.js') }}"></script>
+		<script src="{{ url_for('static', filename='viz_1.js') }}"></script>
+		<script src="{{ url_for('static', filename='viz_2.js') }}"></script>
+		<script src="{{ url_for('static', filename='viz_3.js') }}"></script>
+		<title>Mock Visualizations</title>
+	</head>
+
+	<body>
+		<!--
+			(0) Proportion of Students in Each Credential (Doughnut)
+			(1) Year Over Year Retention
+				-By Credential (Bar Graph)
+				-By Credential + Year (Line Graph)
+				-By Race
+				-Controlling for Student Characteristics
+			(2) Year Over Year Completion
+				-By Year
+				-By Race
+				-Controlling for Student Characteristics
+			(3) Year Over Year Transfer
+				-By Year
+				-By Race
+				-Controlling for Student Characteristics
+		-->
+
+		<div id="menu-bar">
+	
+			<div id="menu">
+				<div id="bar1" class="bar"></div>
+				<div id="bar2" class="bar"></div>
+				<div id="bar3" class="bar"></div>
+			</div>
+	
+			<ul class="nav" id="nav">
+				<li><a href="#" id="enrollment">Enrollment</a></li>
+				<li><a href="#" id="retention">Retention</a></li>
+				<li><a href="#" id="transfer">Transfer</a></li>
+				<li><a href="#" id="completion">Completion</a></li>
+			</ul>
+	
+		</div>
+
+		<div id="header_box">
+			<div id="header"></div>
+		</div>
+
+		<div id="canvas_box">
+			<canvas id="my_chart"></canvas>
+		</div>
+
+	</body>
+
+</html>
